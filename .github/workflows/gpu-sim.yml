@@ -5,6 +5,8 @@ name: GPU simulator (H100)
 # A simulator cannot reproduce hardware-specific behavior or timing, so it complements the GPU
 # runs of scripts/verify_reproduction.sh and does not replace them.
 on:
+  push:
+    branches: [verify-gpu-sim]
   pull_request:
     branches: [main, next]
     paths:
